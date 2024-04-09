@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Shaun",
+        "rate": "20000",
+        "belt": "red",
+        "src": ""
+    },
+    {
+        "name": "John",
+        "rate": "10000",
+        "belt": "white",
+        "src": ""
+    },
+    {
+        "name": "Ryu",
+        "rate": "40000",
+        "belt": "blue",
+        "src": ""
+    },
+    {
+        "name": "Kai",
+        "rate": "70000",
+        "belt": "black",
+        "src": ""
+    },
+    {
+        "name": "Koga",
+        "rate": "45000",
+        "belt": "orange",
+        "src": ""
+    }
+]

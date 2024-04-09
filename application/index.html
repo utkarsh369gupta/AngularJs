@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NINJAS</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body ng-app='myapp'>
+    <input type="search" name="search" id="search" placeholder="search Ninja" ng-model="search">
+    <input type="button" value="Order by Name" ng-click="order='name'">
+    <input type="button" value="Order by rate" ng-click="order = 'rate'">
+
+    <div ng-controller='NinjaController'>
+        <ul>
+            <li ng-repeat="x in ninjas | filter:search | orderBy:order">{{x.name}} - {{x.rate | currency:'&#8377;'}}
+                {{x.belt}}
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- <div ng-init='ninjas = [
+{
+"name": "shaun" , "rate" : "20000" , "belt" : "red" , "src" : "" }, { "name" : "john" , "rate" : "5000"
+, "belt" : "white" , "src" : "" }, { "name" : "Ryu" , "rate" : "40000" , "belt" : "blue" , "src" : "" },
+{ "name" : "Kai" , "rate" : "70000" , "belt" : "black" , "src" : "" }, { "name" : "Koga" , "rate" : "40000"
+, "belt" : "orange" , "src" : "" } ]'>
+
+
+<input type="search" name="search" id="search" placeholder="SEARCH  NINJA" ng-model='ninja'>
+<p> You search for {{ninja}}</p>
+
+<ul>
+    <li ng-repeat="x in ninjas">{{x.name}}</li>
+</ul>
+
+</div> -->
