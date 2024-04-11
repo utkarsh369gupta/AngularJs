@@ -1,0 +1,138 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: work sans;
+}
+
+.heading {
+    background-color: red;
+    color: white;
+    padding: 15px 15px 15px 15px;
+    margin-bottom: 10PX;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(23, 135, 240);
+}
+
+.heading ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-right: 8px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.heading ul a {
+    color: white;
+}
+
+.application {
+    margin: 30px 0px 30px 30px;
+}
+
+
+.application #search {
+    padding: 10px;
+    margin: 2rem 7rem 2rem 7rem;
+    border-radius: 6px;
+    border: 1.5px solid rgb(36, 36, 149);
+    width: 80%;
+    display: flow-root;
+    font-weight: 600;
+    font-size: 15px;
+    justify-content: center;
+    align-content: center;
+}
+
+.application .sortbtn {
+    justify-content: center;
+    display: flex;
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(32, 172, 172);
+    box-shadow: 0px 2px 2px;
+}
+
+.ninjasList li {
+    font-weight: 500;
+    font-size: 17px;
+    list-style: none;
+    padding: 8px;
+    margin-right: 20px;
+
+}
+
+.ninjaImage{
+    width: 50px;
+    margin-right: 20px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ninjasList li span{
+    margin-top: 15px;
+}
+.name-rate{
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+#beltcolor {
+    width: 100px;
+    float: right;
+    margin-right: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 2px solid black;
+    font-weight: 600;
+    color: rgb(54, 218, 76);
+    border-radius: 10px;
+}
+
+.ninjasList li #close {
+    color: red;
+    margin-right: 30px;
+    float: right;
+    cursor: pointer;
+}
+
+.insertNinja form{
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+}
+.insertNinja form input {
+    margin: 8px;
+    padding: 5px;
+    display: flow-root;
+    font-weight: 600;
+    font-size: 15px;
+    justify-content: center;
+    align-content: center;
+}
+
+main {
+    background-color: rgb(223, 225, 229);
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 7px;
+    max-width: 85%;
+    padding: 15px;
+    box-shadow: 0px 2px 8px rgb(156, 155, 155);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
