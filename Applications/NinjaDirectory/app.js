@@ -4,11 +4,38 @@ var MyApp = angular.module("myapp", ['ngRoute']);
 // .filter('sortINt', function (a,b) { return a-b })
 
 
-MyApp.config(['$routeProvider', function ($routeProvider) {
+MyApp.directive('randomNinja', [function () {
+    return {
+        restrict: 'E',
+        scope: {
+            ninjas: '=',
+            title: '='
+        },
+        templateUrl: 'views/randomNinja.html',
+        transclude: true,
+        controller: function ($scope) {
+            $scope.random = Math.floor(Math.random() * 4);
+        }
+    }
+}])
+MyApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+
+    $locationProvider.html5Mode(true);
 
     $routeProvider
         .when('/home', {
-            templateUrl: 'views/homepage.html'
+            templateUrl: 'views/homepage.html',
+            controller: 'NinjaController'
+        })
+        .when('/contact', {
+            templateUrl: 'views/contact.html',
+            controller: 'ContactController'
+
+        })
+        .when('/contact-success', {
+            templateUrl: 'views/contact-success.html',
+            controller: 'ContactController'
+
         })
         .when('/directory', {
             templateUrl: 'views/directory.html',
@@ -27,7 +54,7 @@ MyApp.controller('NinjaController', ['$scope', '$http', function ($scope, $http)
     $http.get('ninjas.json')
         .then(function (response) {
             $scope.ninjas = response.data;
-            console.log(angular.toJson($scope.ninjas));
+            // console.log(angular.toJson($scope.ninjas));
         })
         .catch(function (error) {
             $scope.ninjas = null;
@@ -56,6 +83,12 @@ MyApp.controller('NinjaController', ['$scope', '$http', function ($scope, $http)
 }]);
 
 
+MyApp.controller('ContactController', ['$scope', '$location', function ($scope, $location) {
+
+    $scope.senddetails = function(){
+        $location.path('contact-success');
+    }
+}])
 
 
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app="myapp">
+    <div class="entertodo" ng-controller="TodoController">
+        <input type="text" name="title" id="title" placeholder="Enter Title" ng-model="title">
+        <input type="text" name="desc" id="desc" placeholder="Enter Description" ng-model="desc">
+        <input type="button" value="Add Todo" ng-click="addTodo()">
+        <hr>
+        <ul>
+            <li ng-repeat="x in todos" ng-show="!x.done"><span ng-click="done(x)">X</span><b> {{x.title | uppercase }}</b> - {{x.desc}} </li>
+        </ul>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

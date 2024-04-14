@@ -76,8 +76,10 @@
     width: 50px;
     margin-right: 20px;
     border-radius: 30px;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    align-content:flex-start;
 }
 
 .ninjasList li span{
@@ -128,11 +130,60 @@ main {
     background-color: rgb(223, 225, 229);
     border: 1px solid rgb(179, 179, 179);
     border-radius: 7px;
-    max-width: 85%;
+    width: 85%;
     padding: 15px;
     box-shadow: 0px 2px 8px rgb(156, 155, 155);
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    /* text-align: center; */
     margin: 0 auto;
 }
+
+form[name='contactform'] {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Align text within elements */
+}
+
+form[name='contactform'] input{
+    display: flex;
+    margin: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: medium;
+    box-shadow: 0px 2px 4px rgb(151, 150, 150);
+    text-align: center;
+}
+
+form[name='contactform'] textarea{
+    display: flex;
+    margin: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: medium;
+    box-shadow: 0px 2px 4px rgb(151, 150, 150);
+    text-align: center;
+}
+
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+    border: 4px solid rgb(228, 29, 29);
+    box-shadow: 0px 2px 6px rgb(236, 137, 137);
+}
+
+input[disabled= "disabled"]{
+    opacity: 0.6;
+    cursor: not-allowed !important;
+}
+
+
+
+
+
+

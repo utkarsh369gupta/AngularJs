@@ -1,0 +1,66 @@
+<div class="container">
+    <!-- {{contact}} -->
+    <h1><u>Form Validation</u></h1>
+    <form method="post" name="Myform">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Your Name" ng-model="contact.name"
+            ng-required="true" ng-pattern="/^[a-zA-Z]+$/">
+        <div ng-show="Myform.name.$invalid && Myform.name.$touched">
+            <small style="color: red; display: flex; font-weight: 600;">Enter Valid name</small>
+        </div>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter Your Username" ng-model="contact.username"
+            ng-required="true" name="username" ng-pattern="/^[a-zA-Z]+$/" ng-minlength="10" ng-maxlength="20">
+        <div ng-show="Myform.username.$invalid && Myform.username.$touched">
+            <small style="color: red; display: flex; font-weight: 600;">Enter Valid Username</small>
+        </div>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter Your Password" ng-model="contact.password"
+            ng-required="true" name="password" ng-pattern="/^[a-zA-Z]+$/" ng-minlength="10" ng-maxlength="20">
+        <div ng-show="Myform.password.$invalid && Myform.password.$touched">
+            <small style="color: red; display: flex; font-weight: 600;">Enter Valid Password</small>
+        </div>
+
+        <label for="repassword">Confirm Password:</label>
+        <input type="password" id="repassword" placeholder="Confirm Your Password" ng-model="contact.repassword"
+            ng-required="true" name="repassword">
+        <div ng-show="contact.repassword !== contact.password && Myform.repassword.$touched">
+            <small style="color: red; display: flex; font-weight: 600;">Enter Valid Password</small>
+        </div>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" id="male" value="Male"><label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label>
+        <input type="radio" name="gender" id="other" value="Other"><label for="other">Other</label><br><br>
+
+        <label>Programming Skills:</label>
+        <input type="checkbox" name="skills" id="java" value="Java"><label for="java">Java</label>
+        <input type="checkbox" name="skills" id="android" value="Android"><label for="android">Android</label>
+        <input type="checkbox" name="skills" id="ruby" value="Ruby"><label for="ruby">Ruby</label>
+        <input type="checkbox" name="skills" id="dotnet" value=".NET"><label for="dotnet">.NET</label><br><br>
+
+        <label for="phoneNumber">Contact Number:</label>
+        <input type="text" id="phoneNumber" placeholder="Enter Your Contact Number" ng-model="contact.phoneNumber"
+            ng-required="true" ng-maxlength="10" ng-minlength="10" name="phonenumber">
+        <div ng-show="Myform.phonenumber.$invalid && Myform.phonenumber.$touched">
+            <small style="color: red; display: flex; font-weight: 600;">Enter valid phone number</small>
+        </div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter Your Email" ng-model="contact.email" ng-required="true" ng-pattern="/^\w+@\w+$/" name="email">
+        <div ng-show="Myform.email.$invalid && Myform.email.$touched">
+            <small style="color: red; display: flex; font-weight: 600;">Enter valid email</small>
+        </div>
+
+        <label for="college">College:</label>
+        <select id="college" name="college">
+            <option value="select">Select</option>
+            <option value="VIT">VIT</option>
+            <option value="VIT-C">VIT-C</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
