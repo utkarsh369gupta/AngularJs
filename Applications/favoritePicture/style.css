@@ -1,0 +1,23 @@
+.images{
+    width: 90px;
+    height: 150px;
+    display: flex;
+}
+
+img{
+    padding: 10px;
+}
+
+ul li{
+    list-style: none;
+    display: flex;
+}
+ul{
+    display: flex;
+}
+.inst ul{
+    display: block;
+}
+.inst ul li{
+    list-style:disc;
+}

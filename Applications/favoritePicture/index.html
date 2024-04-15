@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Favourite Picture</title>
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app="myapp">
+    <div ng-controller="PicsController">
+        <h1>Geneva Pics!!</h1>
+        <div class="images">
+            <ul>
+                <li ng-repeat="x in imageList" ng-click="addfavourite(x)"><img ng-src='{{x}}'></li>
+            </ul>
+        </div>
+        <p>Click the image to move it to Favourite</p>
+        <h1>Favourite Pics!!</h1>
+        <div class="images">
+            <ul>
+                <li ng-repeat="x in favList"><img ng-src='{{x}}'></li>
+            </ul>
+        </div>
+        <div class="inst">
+            <ul>
+                <li ng-repeat="x in favList">{{added}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
